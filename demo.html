@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>DEMO jquery.formValidation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Denis METRAL-DESCHAMPS Aka denisdeejay">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+        <style>
+          body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+          }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="brand" href="#">jQuery formValidation</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container">
+                <h1>DEMO jQuery formValidation</h1>
+
+                <div class="row">
+                    <div class="span8">
+                        <form class="form-horizontal form-contact" method="post" action="#">
+                            <div class="control-group">
+                                <label class="control-label" for="inputNom">Nom</label>
+                                <div class="controls">
+                                    <input type="text" id="inputNom" name="nom" placeholder="Nom" data-field-type="name" data-field-error="Veuillez entrer un nom correct" required>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputPrenom">Prénom</label>
+                                <div class="controls">
+                                    <input type="text" id="inputPrenom" name="prenom" placeholder="Prénom" data-field-type="name" data-field-error="Veuillez entrer un prénom correct">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputAdresse">Adresse</label>
+                                <div class="controls">
+                                    <input type="text" id="inputAdresse" name="adresse" placeholder="Adresse" data-field-type="address" data-field-error="Veuillez entrer une adresse correcte">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputVille">Ville</label>
+                                <div class="controls">
+                                    <input type="text" id="inputVille" name="ville" placeholder="Code postal et Ville">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputTelephone">Téléphone</label>
+                                <div class="controls">
+                                    <input type="tel" id="inputTelephone" name="telephone" placeholder="Téléphone" data-field-type="phoneFR" data-field-error="Veuillez entrer un numéro de téléphone correct" required>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputEmail">Email</label>
+                                <div class="controls">
+                                    <input type="email" id="inputEmail" name="email" placeholder="Email" data-field-type="email" data-field-error="Veuillez entrer une adresse email correcte" required>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputMessage">Message</label>
+                                <div class="controls">
+                                    <textarea rows="5" id="inputMessage" name="message" placeholder="Votre message" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <input type="submit" class="btn btn-primary btn-large" value="Poster votre message">
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="span4">
+                        <div class="well">
+                            <p>Démonstration du plugin jQuery formValidation</p>
+                            <p>Commande utilisée :</p>
+                            <code>
+                                $('.form-contact').formValidation();
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+            <script src="jquery.formValidation.js"></script>
+            <script>
+                ;(function($, window, document, undefined ){
+                    $(document).ready(function(){
+                        $('.form-contact').formValidation();
+                    });
+                })( jQuery, window, document );
+            </script>
+        </div>
+    </body>
+</html>
