@@ -143,7 +143,7 @@
 					// c'est params.success qui se chargera de bloquer ou non l'event
 					if($.isFunction(params.success)){
 						params.success(e);
-						return false;
+						return true;
 					}					
 					return true;
 				} else {
